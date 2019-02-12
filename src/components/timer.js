@@ -1,8 +1,5 @@
 import React from 'react';
 
-// let ms = 4205000;
-let ms = 60100;
-
 class Timer extends React.Component {
     constructor(props) {
         super(props)
@@ -15,7 +12,7 @@ class Timer extends React.Component {
         }
         setInterval(
             () => { 
-                if (this.state.start&&this.state.timer<=(ms/10)) { 
+                if (this.state.start) { 
                     this.setState({
                         timer: this.state.timer + 1,
                         hours: parseInt(this.state.timer/360000),
